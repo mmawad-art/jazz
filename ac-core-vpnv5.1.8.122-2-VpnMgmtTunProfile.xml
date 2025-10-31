@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AnyConnectProfile xmlns="http://schemas.xmlsoap.org/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.xmlsoap.org/encoding/ AnyConnectProfile.xsd">
+	<ClientInitialization>
+		<LocalLanAccess UserControllable="false">true</LocalLanAccess>
+		<DisableCaptivePortalDetection UserControllable="false">false</DisableCaptivePortalDetection>
+		<ClearSmartcardPin UserControllable="false">true</ClearSmartcardPin>
+		<SuspendOnConnectedStandby>false</SuspendOnConnectedStandby>
+		<IPProtocolSupport>IPv4,IPv6</IPProtocolSupport>
+		<RSASecurIDIntegration UserControllable="false">Automatic</RSASecurIDIntegration>
+		<AllowLocalProxyConnections>true</AllowLocalProxyConnections>
+		<AuthenticationTimeout>30</AuthenticationTimeout>
+		<CaptivePortalRemediationBrowserFailover>true</CaptivePortalRemediationBrowserFailover>
+		<ProxySettings>IgnoreProxy</ProxySettings>
+		<AutomaticVPNPolicy>true
+			<TrustedDNSDomains>corp.flyjazz.ca,chra.chorusaviation.com</TrustedDNSDomains>
+			<TrustedDNSServers>157.162.0.69,157.162.0.232,157.162.72.72,157.162.72.99,157.162.51.150,157.162.48.5,157.162.32.25,157.162.198.10,157.162.199.10,157.162.56.10,157.162.196.53,172.22.255.53,172.24.255.53</TrustedDNSServers>
+			<TrustedNetworkPolicy>Disconnect</TrustedNetworkPolicy>
+			<UntrustedNetworkPolicy>DoNothing</UntrustedNetworkPolicy>
+			<BypassConnectUponSessionTimeout>false</BypassConnectUponSessionTimeout>
+			<AlwaysOn>false</AlwaysOn>
+		</AutomaticVPNPolicy>
+		<PPPExclusion UserControllable="false">Automatic
+			<PPPExclusionServerIP UserControllable="false"></PPPExclusionServerIP>
+		</PPPExclusion>
+		<ShowPreConnectMessage>false</ShowPreConnectMessage>
+		<CertificateStore>Machine</CertificateStore>
+		<CertificateStoreMac>System</CertificateStoreMac>
+		<CertificateStoreLinux>Machine</CertificateStoreLinux>
+		<CertificateStoreOverride>true</CertificateStoreOverride>
+		<WindowsVPNEstablishment>AllowRemoteUsers</WindowsVPNEstablishment>
+		<LinuxVPNEstablishment>AllowRemoteUsers</LinuxVPNEstablishment>
+		<AllowManualHostInput>false</AllowManualHostInput>
+		<UseStartBeforeLogon UserControllable="false">false</UseStartBeforeLogon>
+		<AutoConnectOnStart UserControllable="false">false</AutoConnectOnStart>
+		<MinimizeOnConnect UserControllable="false">false</MinimizeOnConnect>
+		<AutoUpdate UserControllable="false">false</AutoUpdate>
+		<AutomaticCertSelection UserControllable="false">true</AutomaticCertSelection>
+		<EnableAutomaticServerSelection UserControllable="false">false</EnableAutomaticServerSelection>
+		<EnableScripting UserControllable="false">false</EnableScripting>
+		<AutoReconnect UserControllable="false">true
+			<AutoReconnectBehavior UserControllable="false">ReconnectAfterResume</AutoReconnectBehavior>
+		</AutoReconnect>
+		<RetainVpnOnLogoff>true
+			<UserEnforcement>AnyUser</UserEnforcement>
+		</RetainVpnOnLogoff>
+	</ClientInitialization>
+	<ServerList>
+		<HostEntry>
+			<HostName>YHZ2</HostName>
+			<HostAddress>yhzv2.flyjazz.ca</HostAddress>
+			<UserGroup>MgmtVPN</UserGroup>
+		</HostEntry>
+	</ServerList>
+</AnyConnectProfile>

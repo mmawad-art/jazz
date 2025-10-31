@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AnyConnectProfile xmlns="http://schemas.xmlsoap.org/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.xmlsoap.org/encoding/ AnyConnectProfile.xsd">
+	<ClientInitialization>
+		<UseStartBeforeLogon UserControllable="true">true</UseStartBeforeLogon>
+		<AutoConnectOnStart UserControllable="true">false</AutoConnectOnStart>
+		<MinimizeOnConnect UserControllable="true">true</MinimizeOnConnect>
+		<LocalLanAccess UserControllable="false">false</LocalLanAccess>
+		<DisableCaptivePortalDetection UserControllable="false">false</DisableCaptivePortalDetection>
+		<AutoUpdate UserControllable="false">true</AutoUpdate>
+		<ClearSmartcardPin UserControllable="false">true</ClearSmartcardPin>
+		<ShowPreConnectMessage>false</ShowPreConnectMessage>
+		<CertificateStore>All</CertificateStore>
+		<CertificateStoreMac>All</CertificateStoreMac>
+		<CertificateStoreLinux>All</CertificateStoreLinux>
+		<CertificateStoreOverride>true</CertificateStoreOverride>
+		<SuspendOnConnectedStandby>false</SuspendOnConnectedStandby>
+		<WindowsLogonEnforcement>SingleLocalLogon</WindowsLogonEnforcement>
+		<LinuxLogonEnforcement>SingleLocalLogon</LinuxLogonEnforcement>
+		<WindowsVPNEstablishment>LocalUsersOnly</WindowsVPNEstablishment>
+		<LinuxVPNEstablishment>LocalUsersOnly</LinuxVPNEstablishment>
+		<IPProtocolSupport>IPv4,IPv6</IPProtocolSupport>
+		<AutoReconnect UserControllable="false">true
+			<AutoReconnectBehavior UserControllable="false">DisconnectOnSuspend</AutoReconnectBehavior>
+		</AutoReconnect>
+		<RSASecurIDIntegration UserControllable="false">Automatic</RSASecurIDIntegration>
+		<AllowLocalProxyConnections>true</AllowLocalProxyConnections>
+		<AuthenticationTimeout>12</AuthenticationTimeout>
+		<CaptivePortalRemediationBrowserFailover>true</CaptivePortalRemediationBrowserFailover>
+		<AllowManualHostInput>false</AllowManualHostInput>
+		<AutomaticCertSelection UserControllable="false">true</AutomaticCertSelection>
+		<ProxySettings>IgnoreProxy</ProxySettings>
+		<AutomaticVPNPolicy>true
+			<TrustedDNSDomains>corp.flyjazz.ca,chra.chorusaviation.com</TrustedDNSDomains>
+			<TrustedDNSServers>157.162.0.69,157.162.0.232,157.162.72.72,157.162.72.99,157.162.51.150,157.162.48.5,157.162.32.25,157.162.198.10,157.162.199.10,157.162.56.10,157.162.196.53,172.22.255.53,172.24.255.53</TrustedDNSServers>
+			<TrustedNetworkPolicy>DoNothing</TrustedNetworkPolicy>
+			<UntrustedNetworkPolicy>DoNothing</UntrustedNetworkPolicy>
+			<BypassConnectUponSessionTimeout>false</BypassConnectUponSessionTimeout>
+			<AlwaysOn>false</AlwaysOn>
+		</AutomaticVPNPolicy>
+		<PPPExclusion UserControllable="false">Automatic
+			<PPPExclusionServerIP UserControllable="false"></PPPExclusionServerIP>
+		</PPPExclusion>
+		<EnableScripting UserControllable="false">true
+			<TerminateScriptOnNextEvent>false</TerminateScriptOnNextEvent>
+			<EnablePostSBLOnConnectScript>true</EnablePostSBLOnConnectScript>
+		</EnableScripting>
+		<EnableAutomaticServerSelection UserControllable="false">false</EnableAutomaticServerSelection>
+		<RetainVpnOnLogoff>false</RetainVpnOnLogoff>
+		<CertificateMatch>
+			<MatchOnlyCertsWithKU>false</MatchOnlyCertsWithKU>
+			<KeyUsage>
+				<MatchKey>Digital_Signature</MatchKey>
+			</KeyUsage>
+			<ExtendedKeyUsage>
+				<ExtendedMatchKey>ClientAuth</ExtendedMatchKey>
+
+			</ExtendedKeyUsage>
+			<DistinguishedName>
+				<DistinguishedNameDefinition Operator="Equal" Wildcard="Enabled" MatchCase="Disabled">
+					<Name>ISSUER-CN</Name>
+					<Pattern>Jazz</Pattern>
+				</DistinguishedNameDefinition>
+			</DistinguishedName>
+		</CertificateMatch>
+	</ClientInitialization>
+	<ServerList>
+		<HostEntry>
+			<HostName>Jazz Aviation - YHZ1</HostName>
+			<HostAddress>yhzv1.flyjazz.ca</HostAddress>
+			<UserGroup>jazz</UserGroup>
+			<BackupServerList>
+				<HostAddress>yhzv2.flyjazz.ca/jazz</HostAddress>
+				<HostAddress>yyzv1.flyjazz.ca/jazz</HostAddress>
+				<HostAddress>yvr1.flyjazz.ca/jazz</HostAddress>
+			</BackupServerList>
+			<AutomaticSCEPHost></AutomaticSCEPHost>
+		</HostEntry>
+		<HostEntry>
+			<HostName>Jazz Aviation - YHZ2</HostName>
+			<HostAddress>yhzv2.flyjazz.ca</HostAddress>
+			<UserGroup>jazz</UserGroup>
+			<BackupServerList>
+				<HostAddress>yhzv1.flyjazz.ca/jazz</HostAddress>
+				<HostAddress>yyzv1.flyjazz.ca/jazz</HostAddress>
+				<HostAddress>yvr1.flyjazz.ca/jazz</HostAddress>
+			</BackupServerList>
+			<AutomaticSCEPHost></AutomaticSCEPHost>
+		</HostEntry>
+		<HostEntry>
+			<HostName>Jazz Aviation - YYZ1</HostName>
+			<HostAddress>yyzv1.flyjazz.ca</HostAddress>
+			<UserGroup>jazz</UserGroup>
+			<BackupServerList>
+				<HostAddress>yhzv1.flyjazz.ca/jazz</HostAddress>
+				<HostAddress>yhzv2.flyjazz.ca/jazz</HostAddress>
+				<HostAddress>yvr1.flyjazz.ca/jazz</HostAddress>
+			</BackupServerList>
+			<AutomaticSCEPHost></AutomaticSCEPHost>
+		</HostEntry>
+		<HostEntry>
+			<HostName>Jazz Aviation - YVR1</HostName>
+			<HostAddress>yvr1.flyjazz.ca</HostAddress>
+			<UserGroup>jazz</UserGroup>
+			<BackupServerList>
+				<HostAddress>yhzv1.flyjazz.ca/jazz</HostAddress>
+				<HostAddress>yhzv2.flyjazz.ca/jazz</HostAddress>
+				<HostAddress>yyzv1.flyjazz.ca/jazz</HostAddress>
+			</BackupServerList>
+			<AutomaticSCEPHost></AutomaticSCEPHost>
+		</HostEntry>
+		<HostEntry>
+			<HostName>Chorus Aviation - YHZ1</HostName>
+			<HostAddress>yhzv1.flyjazz.ca</HostAddress>
+			<UserGroup>chorus</UserGroup>
+			<BackupServerList>
+				<HostAddress>yhzv2.flyjazz.ca/chorus</HostAddress>
+				<HostAddress>yyzv1.flyjazz.ca/chorus</HostAddress>
+			</BackupServerList>
+		</HostEntry>
+		<HostEntry>
+			<HostName>Chorus Aviation - YHZ2</HostName>
+			<HostAddress>yhzv2.flyjazz.ca</HostAddress>
+			<UserGroup>chorus</UserGroup>
+			<BackupServerList>
+				<HostAddress>yhzv1.flyjazz.ca/chorus</HostAddress>
+				<HostAddress>yyzv1.flyjazz.ca/chorus</HostAddress>
+			</BackupServerList>
+		</HostEntry>
+		<HostEntry>
+			<HostName>Chorus Aviation - YYZ1</HostName>
+			<HostAddress>yyzv1.flyjazz.ca</HostAddress>
+			<UserGroup>chorus</UserGroup>
+			<BackupServerList>
+				<HostAddress>yhzv1.flyjazz.ca/chorus</HostAddress>
+				<HostAddress>yhzv2.flyjazz.ca/chorus</HostAddress>
+			</BackupServerList>
+		</HostEntry>
+	</ServerList>
+</AnyConnectProfile>

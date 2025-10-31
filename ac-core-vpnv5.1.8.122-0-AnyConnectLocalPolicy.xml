@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AnyConnectLocalPolicy xmlns="http://schemas.xmlsoap.org/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.xmlsoap.org/encoding/ AnyConnectLocalPolicy.xsd" acversion="3.0.0592">
+	<FipsMode>false</FipsMode>
+	<BypassDownloader>false</BypassDownloader>
+	<RestrictWebLaunch>true</RestrictWebLaunch>
+	<StrictCertificateTrust>false</StrictCertificateTrust>
+	<EnableCRLCheck>false</EnableCRLCheck>
+	<ExcludePemFileCertStore>false</ExcludePemFileCertStore>
+	<ExcludeFirefoxNSSCertStore>false</ExcludeFirefoxNSSCertStore>
+	<UpdatePolicy>
+		<AllowSoftwareUpdatesFromAnyServer>true</AllowSoftwareUpdatesFromAnyServer>
+		<AllowVPNProfileUpdatesFromAnyServer>true</AllowVPNProfileUpdatesFromAnyServer>
+		<AllowManagementVPNProfileUpdatesFromAnyServer>true</AllowManagementVPNProfileUpdatesFromAnyServer>
+		<AllowServiceProfileUpdatesFromAnyServer>true</AllowServiceProfileUpdatesFromAnyServer>
+		<AllowISEProfileUpdatesFromAnyServer>true</AllowISEProfileUpdatesFromAnyServer>
+		<AllowComplianceModuleUpdatesFromAnyServer>true</AllowComplianceModuleUpdatesFromAnyServer>
+		<AuthorizedServerList>
+			<ServerName>*.flyjazz.ca</ServerName>
+		</AuthorizedServerList>
+	</UpdatePolicy>
+	<RestrictPreferenceCaching>CredentialsAndThumbprints</RestrictPreferenceCaching>
+</AnyConnectLocalPolicy>
